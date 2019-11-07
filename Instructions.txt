@@ -1,0 +1,41 @@
+DBLP Map Reduce
+
+Platform : Apache Hadoop
+Languages: Scala and Java
+
+Map Reduce Operations:
+
+  - Calculating authorship score of authors.
+  - Finding Mean, Median and Maximum of the number of co-authors across different articles and publications for an individual authors.
+  - Finding the number of authors in papers and assigning them to different bins based on range of authors.
+  - Finding the number of unique collaborations of every authors in the DBLP dataset.
+
+Instructions:
+
+1) Traverse to the root directory of the project in powershell
+
+2) Run Test cases using command:
+$ sbt clean compile test
+
+3) Create jar file of the project using command
+$ sbt clean compile assembly
+
+4) Upload jar file to AWS S3 storage
+
+5) Create an input directory and upload dblp Input File to S3 storage
+
+6) Create a cluster on AWS EMR
+
+7) Go to advance options and setup Cluster name, Custom Jar for map reduce and input and output directory as arguments for the program
+
+8) Download output files
+
+9) Rename Downloaded output files using command
+Rename-Item part-r-00000 file1.csv
+Rename-Item part-r-00001 file2.csv
+Rename-Item part-r-00002 file3.csv
+
+9) Concatenate output files from power shell using command 
+get-content file1.csv, file2.csv, file3.csv | out-file output.csv
+
+10) Open the resultant output file in excel
