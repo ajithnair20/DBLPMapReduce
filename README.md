@@ -1,6 +1,6 @@
 # DBLP Map Reduce
 
-This project aims at creating a map/reduce program for parallel processing of the publically available [DBLP dataset](https://dblp.uni-trier.de/xml/) that contains entries for various publications at many different venues (e.g., conferences and journals). We perform multiple map/reduce operations on the dataset to identify differernt statistics pertaining to the authors of the publications.
+The project aims at creating a map/reduce program for parallel processing of the publically available [DBLP dataset](https://dblp.uni-trier.de/xml/) that contains entries for various publications at many different venues (e.g., conferences and journals). We perform multiple map/reduce operations on the dataset to identify differernt statistics pertaining to the authors of the publications.
 The type of map/reduce operations performed are :
   - Calculating authorship score of authors.
   - Finding Mean, Median and Maximum of the number of co-authors across different articles and publications for an individual authors.
